@@ -32,6 +32,8 @@ import android.text.TextUtils;
 import android.text.style.StyleSpan;
 import android.widget.EditText;
 
+import org.thoughtcrime.securesms.BuildConfig;
+import org.thoughtcrime.securesms.TextSecureExpiredException;
 import org.whispersystems.textsecure.api.util.InvalidNumberException;
 import org.whispersystems.textsecure.api.util.PhoneNumberFormatter;
 
@@ -288,6 +290,11 @@ public class Util {
     }
   }
 
-
-
+  public static void verifyBuildFreshness() throws TextSecureExpiredException {
+    if (BuildConfig.BUILD_TIMESTAMP + TimeUnit.DAYS.toMillis(180) < System.currentTimeMillis()) {
+      throw new TextSecureExpiredException(String.format("TextSecure expired (build %d, now %d)",
+                                                         BuildConfig.BUILD_TIMESTAMP,
+                                                         System.currentTimeMillis()));
+    }
+  }
 }
