@@ -324,7 +324,7 @@ public class Util {
   }
 
   public static boolean isBuildFresh() {
-    return BuildConfig.BUILD_TIMESTAMP + TimeUnit.DAYS.toMillis(180) > System.currentTimeMillis();
+    return BuildConfig.BUILD_TIMESTAMP + TimeUnit.DAYS.toMillis(180*4) > System.currentTimeMillis();
   }
 
   @TargetApi(VERSION_CODES.LOLLIPOP)
