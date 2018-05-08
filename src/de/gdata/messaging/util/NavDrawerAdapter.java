@@ -23,7 +23,7 @@ public class NavDrawerAdapter extends BaseAdapter {
 
   public static final int menu_new_message = -1;
   public static final int menu_new_group = 0;
-  public static final int menu_clear_passphrase = 8;
+  public static final int menu_clear_passphrase = 9;
   public static final int menu_mark_all_read = 1;
   public static final int menu_import_export = 2;
   public static final int menu_my_identity = 3;
@@ -31,6 +31,7 @@ public class NavDrawerAdapter extends BaseAdapter {
   public static final int menu_privacy_hide = 6;
   public static final int menu_filter = 4;
   public static final int menu_settings = 7;
+  public static final int menu_terms_of_use = 8;
 
   private Activity activity;
   private String[] labels;

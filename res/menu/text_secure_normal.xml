@@ -43,4 +43,8 @@
           android:id="@+id/menu_settings"
           android:icon="@android:drawable/ic_menu_preferences" />
 
+    <item android:title="@string/menu_terms_of_use"
+        android:id="@+id/menu_terms_of_use"
+        android:icon="@drawable/icon_terms_of_use" />
+
 </menu>

@@ -34,6 +34,7 @@
         <item>@string/menu_privacy</item>
         <item>@string/menu_privacy_hide</item>
         <item>@string/text_secure_normal__menu_settings</item>
+        <item>@string/menu_terms_of_use</item>
         <item>@string/text_secure_normal__menu_clear_passphrase</item>
     </string-array>
     <string-array name="array_nav_icons">
@@ -45,6 +46,7 @@
         <item>@drawable/ic_action_hidemessage</item>
         <item>@drawable/check_cd</item>
         <item>@drawable/ic_action_settings</item>
+        <item>@drawable/icon_terms_of_use</item>
         <item>@drawable/ic_menu_lock_holo_light</item>
     </string-array>
     <string-array name="status_suggestions">

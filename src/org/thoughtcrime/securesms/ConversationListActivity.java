@@ -30,6 +30,7 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -597,6 +598,9 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
             case NavDrawerAdapter.menu_settings:
                 handleDisplaySettings();
                 break;
+            case NavDrawerAdapter.menu_terms_of_use:
+                handleDisplayTermsOfUse();
+                break;
         }
     }
 
@@ -729,6 +733,9 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
             case R.id.menu_settings:
                 handleDisplaySettings();
                 return true;
+            case R.id.menu_terms_of_use:
+                handleDisplayTermsOfUse();
+                return true;
             case R.id.menu_clear_passphrase:
                 handleClearPassphrase();
                 return true;
@@ -785,6 +792,14 @@ public class ConversationListActivity extends PassphraseRequiredActionBarActivit
         Intent preferencesIntent = new Intent(this, ApplicationPreferencesActivity.class);
         preferencesIntent.putExtra("master_secret", masterSecret);
         startActivity(preferencesIntent);
+    }
+
+    private void handleDisplayTermsOfUse(){
+        Uri termsOfUseWebPage = Uri.parse(getString(R.string.link_terms_of_use));
+        Intent intent = new Intent(Intent.ACTION_VIEW, termsOfUseWebPage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     private void handleClearPassphrase() {

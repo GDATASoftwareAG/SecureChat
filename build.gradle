@@ -1,5 +1,5 @@
-def verName = "1.0.7"
-def verNumber = 16
+def verName = "1.0.8"
+def verNumber = 17
 
 def gitRevision = (System.env['GIT_COMMIT'] ? System.env['GIT_COMMIT'] : "MASTER  ").toString()
 def gitBranch = (System.env['GIT_BRANCH'] ? System.env['GIT_BRANCH'].toString().substring(7) : "develop")
@@ -11,7 +11,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.android.tools.build:gradle:2.3.0'
         classpath files('libs/gradle-witness.jar')
     }
 }
@@ -137,7 +137,7 @@ dependencyVerification {
 
 android {
     compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 14

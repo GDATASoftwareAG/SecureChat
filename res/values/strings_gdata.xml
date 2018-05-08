@@ -14,6 +14,8 @@
     <string name="menu_privacy">Hide conversations</string>
     <string name="menu_privacy_unhide">Turn hiding on</string>
     <string name="menu_privacy_hide">Hiding</string>
+    <string name="menu_terms_of_use">Terms of Use</string>
+    <string name="link_terms_of_use">https://www.gdata.de/privacy/mobile</string>
     <string name="menu_privacy_single_hide">Hide conversation</string>
     <string name="menu_filter_block_contact">Block contact</string>
     <string name="self_destruction">Destroy</string>
